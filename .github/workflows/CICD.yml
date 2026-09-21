@@ -105,6 +105,6 @@ jobs:
           file: ./Dockerfile
           
       - name: implementing docker compose
-      - uses: hoverkraft-tech/compose-action@b659c744ee9bed25aea2307c017ad849bd104433
+        uses: hoverkraft-tech/compose-action@b659c744ee9bed25aea2307c017ad849bd104433
         with:
           compose-file: ./Docker-compose.yaml
