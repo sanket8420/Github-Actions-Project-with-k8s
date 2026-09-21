@@ -86,7 +86,7 @@ jobs:
           path: target/*.jar
 
 
-  Docker_build:
+  Docker_build_and_docker_compose:
     runs-on: ubuntu-latest
     needs: Building_artifact
     steps:
@@ -111,3 +111,8 @@ jobs:
           push: true
           tags: sanketjadhav84/bankapp:latest
           file: ./Dockerfile
+
+      - name: implementing docker compose
+      - uses: hoverkraft-tech/compose-action@b659c744ee9bed25aea2307c017ad849bd104433 # v3.2.0
+        with:
+          compose-file: "./Docker-compose.yaml"
