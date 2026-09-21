@@ -112,7 +112,7 @@ jobs:
           tags: sanketjadhav84/bankapp:latest
           file: ./Dockerfile
 
-      - name: implementing docker compose
-      - uses: hoverkraft-tech/compose-action@b659c744ee9bed25aea2307c017ad849bd104433 # v3.2.0
-        with:
-          compose-file: "./Docker-compose.yaml"
+       - name: implementing docker compose
+       - uses: hoverkraft-tech/compose-action@b659c744ee9bed25aea2307c017ad849bd104433 # v3.2.0
+         with:
+           compose-file: "./Docker-compose.yaml"
