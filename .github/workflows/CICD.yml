@@ -103,8 +103,6 @@ jobs:
           push: true
           tags: sanketjadhav84/bankapp:latest
           file: ./Dockerfile
-          
-      - name: implementing docker compose
-        uses: hoverkraft-tech/compose-action@b659c744ee9bed25aea2307c017ad849bd104433
-        with:
-          compose-file: ./Docker-compose.yaml
+
+      - name: Deploy with docker compose
+        run: docker compose -f Docker-compose.yaml pull bankapp && docker compose -f Docker-compose.yaml up -d --no-build
