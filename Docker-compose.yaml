@@ -18,10 +18,7 @@ services:
       - bankapp-net
 
   bankapp:
-    build:
-      context: .
-      dockerfile: Dockerfile.compose
-    image: sanketjadhav84/bankapp:latest
+    image: ghcr.io/sanket8420/bankapp:latest
     container_name: bankapp
     restart: unless-stopped
     ports:
