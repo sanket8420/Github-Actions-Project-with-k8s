@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - main
+
+permissions:
+  contents: read
+  packages: write
+
+
 jobs:
   Compile:
     runs-on: self-hosted
@@ -102,7 +108,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/sanket8420/bankapp:latest
+          tags: ghcr.io/${{ github.repository_owner }}/bankapp:latest
           file: ./Dockerfile
 
       - name: Deploy with docker compose
