@@ -112,4 +112,4 @@ jobs:
           file: ./Dockerfile
 
       - name: Deploy with docker compose
-        run: docker compose down && docker compose -f Docker-compose.yaml up -d --no-build
+        run: docker compose -f Docker-compose.yaml down && docker compose -f Docker-compose.yaml up -d --no-build
