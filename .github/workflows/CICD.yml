@@ -9,8 +9,6 @@ permissions:
   contents: read
   packages: write
 
-env:
-  password: sanketjadhav
 
 
 jobs:
