@@ -56,7 +56,16 @@ jobs:
       - name: Gitleaks
         run: sudo apt install gitleaks -y
       - name: Gitleaks Code Scan
-        run: gitleaks detect source . -r gitleaks-report.json -f json
+        run: gitleaks detect --source . --report-path gitleaks-report.json --report-format json
+
+      - name: Upload Gitleaks report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gitleaks-report
+          path: gitleaks-report.json
+
+          
   Testing:
     runs-on: self-hosted
     needs: Security_check
